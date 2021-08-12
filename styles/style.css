@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,6 +13,8 @@ h1, h2, h3, h4, h5, h6, p, a, img, form, input, ul, li {
 html {
   font-size: 28px;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,9 +24,84 @@ body {
   background-color: #ffffff;
 }
 
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+header .top-bar .logo .logo__item, header .search-bar .search-bar__form, header .search-bar .search-bar__form .search-bar__input {
+  width: 100%;
+  height: 100%;
+}
+
 header {
   width: 100%;
   height: 3.75rem;
   background-color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .top-bar {
+  width: 100%;
+  height: 2.25rem;
+  padding: 17px 20.94px;
+  border-bottom: 1px solid #BBC4D6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .top-bar .logo {
+  width: 135px;
+  height: 30px;
+}
+
+header .search-bar {
+  width: 100%;
+  height: 1.5rem;
+}
+
+header .search-bar .search-bar__form .search-bar__input {
+  border: none;
+}
+
+header .search-bar .search-bar__form .search-bar__input::-webkit-input-placeholder {
+  color: #BBC4D6;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.5rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 17px;
+}
+
+header .search-bar .search-bar__form .search-bar__input::-webkit-input-placeholder::after {
+  width: 50px;
+  height: 50px;
+  content: url(../img/icons/search.svg);
+}
+
+.account__img--md--lr {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

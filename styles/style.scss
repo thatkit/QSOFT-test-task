@@ -1,15 +1,76 @@
 @import 'variables', 'base', 'placeholders', 'mixins';
 
-// (1) Top Bar
+// (1) Header
 
 header {
     width: 100%;
     height: 3.75rem;
     background-color: inherit;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: center;
+
+    // (1.1) Top Bar
+
+    .top-bar {
+        width: 100%;
+        height: 3.75rem - 1.5rem;
+        padding: 17px 20.94px;
+        border-bottom: 1px solid $middle-grey;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 135px;
+            height: 30px;
+        
+            .logo__item {
+                @extend %full-wh;
+            }
+        }
+    }
+
+    // (1.2) Search Bar
+
+    .search-bar {
+        width: 100%;
+        height: 1.5rem;
+
+        .search-bar__form {
+            @extend %full-wh;
+
+            .search-bar__input {
+                @extend %full-wh;
+                border: none;
+
+                &::-webkit-input-placeholder {
+                    color: $middle-grey;
+                    font-family: $secondary-font;
+                    font-size: 0.5rem;
+                    font-weight: normal;
+                    font-style: normal;
+                    line-height: 17px;
+
+                    &::after {
+                        width: 50px;
+                        height: 50px;
+                        content: url(../img/icons/search.svg);
+                    }
+                }
+            }
+        }
+    }
 }
 
 // (2) Main Content
 
 main {
 
+}
+
+.account__img--md--lr {
+    display: none; // this rule shall be automated via sass
 }
