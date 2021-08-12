@@ -1,0 +1,24 @@
+// (1) Global Rules
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, img, form, input, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+// (2) Big Blocks
+
+html {
+    font-size: 28px;
+    font-family: $primary-font;
+}
+
+body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: $bg-color;
+}
