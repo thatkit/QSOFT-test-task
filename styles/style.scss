@@ -2,7 +2,7 @@
 
 // (1) Header
 
-header {
+.header {
     width: 100%;
     height: 3.75rem;
     background-color: inherit;
@@ -13,7 +13,7 @@ header {
 
     // (1.1) Top Bar
 
-    .top-bar {
+    &__top-bar {
         width: 100%;
         height: 3.75rem - 1.5rem;
         padding: 17px 20.94px;
@@ -22,45 +22,39 @@ header {
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+    }
 
-        .logo {
-            width: 135px;
-            height: 30px;
-        
-            .logo__item {
-                @extend %full-wh;
-            }
-        }
+    &__logo {
+        width: 135px;
+        height: 30px;
     }
 
     // (1.2) Search Bar
 
-    .search-bar {
+    &__search-bar {
         width: 100%;
         height: 1.5rem;
+    }
 
-        .search-bar__form {
-            @extend %full-wh;
+    &__form {
+        @extend %full-wh;
+    }
 
-            .search-bar__input {
-                @extend %full-wh;
-                border: none;
+    &__search-icon {
+        position: relative;
+    }
 
-                &::-webkit-input-placeholder {
-                    color: $middle-grey;
-                    font-family: $secondary-font;
-                    font-size: 0.5rem;
-                    font-weight: normal;
-                    font-style: normal;
-                    line-height: 17px;
+    &__input {
+        @extend %full-wh;
+        border: none;
 
-                    &::after {
-                        width: 50px;
-                        height: 50px;
-                        content: url(../img/icons/search.svg);
-                    }
-                }
-            }
+        &::-webkit-input-placeholder {
+            color: $middle-grey;
+            font-family: $secondary-font;
+            font-size: 0.5rem;
+            font-weight: normal;
+            font-style: normal;
+            line-height: 17px;
         }
     }
 }
@@ -71,6 +65,6 @@ main {
 
 }
 
-.account__img--md--lr {
+.header__profile-img {
     display: none; // this rule shall be automated via sass
 }

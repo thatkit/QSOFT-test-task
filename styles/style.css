@@ -28,12 +28,12 @@ body::-webkit-scrollbar {
   width: 0;
 }
 
-header .top-bar .logo .logo__item, header .search-bar .search-bar__form, header .search-bar .search-bar__form .search-bar__input {
+.header__form, .header__input {
   width: 100%;
   height: 100%;
 }
 
-header {
+.header {
   width: 100%;
   height: 3.75rem;
   background-color: inherit;
@@ -52,7 +52,7 @@ header {
           align-items: center;
 }
 
-header .top-bar {
+.header__top-bar {
   width: 100%;
   height: 2.25rem;
   padding: 17px 20.94px;
@@ -72,21 +72,25 @@ header .top-bar {
           align-items: center;
 }
 
-header .top-bar .logo {
+.header__logo {
   width: 135px;
   height: 30px;
 }
 
-header .search-bar {
+.header__search-bar {
   width: 100%;
   height: 1.5rem;
 }
 
-header .search-bar .search-bar__form .search-bar__input {
+.header__search-icon {
+  position: relative;
+}
+
+.header__input {
   border: none;
 }
 
-header .search-bar .search-bar__form .search-bar__input::-webkit-input-placeholder {
+.header__input::-webkit-input-placeholder {
   color: #BBC4D6;
   font-family: "Montserrat", sans-serif;
   font-size: 0.5rem;
@@ -95,13 +99,7 @@ header .search-bar .search-bar__form .search-bar__input::-webkit-input-placehold
   line-height: 17px;
 }
 
-header .search-bar .search-bar__form .search-bar__input::-webkit-input-placeholder::after {
-  width: 50px;
-  height: 50px;
-  content: url(../img/icons/search.svg);
-}
-
-.account__img--md--lr {
+.header__profile-img {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */

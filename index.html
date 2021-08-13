@@ -10,26 +10,27 @@
 <body>
 
     <!-- Header -->
-    <header>
-        <div class="top-bar">
-            <div class="logo">
-                <img class="logo__item" src="./img/main-logo.svg" alt="qsoft логотип" width="135" height="30">
-            </div>
-            <div class="account">
-                <div class="account__icon--sm">
-                    <img src="./img/icons/account.svg" alt="иконка профиля" width="24" height="24">
+    <header class="header">
+        <div class="header__top-bar">
+            <img class="header__logo" src="./img/main-logo.svg" alt="qsoft логотип" width="135" height="30">
+            <div class="header__profile">
+                <div class="header__profile-icon">
+                    <img src="./img/icons/profile.svg" alt="иконка профиля" width="24" height="24">
                 </div>
-                <div class="account__img--md--lr">
-                    <p class="account__name">
+                <div class="header__profile-img">
+                    <p class="header__profile-name">
                         Константин
                     </p>
-                    <img class="account__photo" src="./img/account-photo.png" alt="фото профиля">
+                    <img class="header__profile-photo" src="./img/profile-photo.png" alt="фото профиля">
                 </div>
             </div>
         </div>
-        <div class="search-bar">
-            <form class="search-bar__form">
-                <input class="search-bar__input" id="search-box" type="search" placeholder="Найти...">
+        <div class="header__search-bar">
+            <form class="header__form">
+                <label class="header__search-icon" for="search-box">
+                    <img src="./img/icons/search.svg" alt="">
+                </label>
+                <input class="header__input" id="search-box" type="search" placeholder="Найти...">
             </form>
         </div>
     </header>
