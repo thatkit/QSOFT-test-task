@@ -42,8 +42,15 @@
     // (1.3) Search Bar
 
     &__search-bar {
-        width: 100%;
-        height: 1.5rem;
+        
+        &--mobile {
+            width: 100%;
+            height: 1.5rem;
+        }
+        
+        &--tablet--desktop {
+            display: none; // hides middle search-bar for non-mobile devices
+        }
     }
 
     &__form {
