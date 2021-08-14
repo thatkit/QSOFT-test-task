@@ -9,7 +9,7 @@
     @include flex($flex-direction: column, $justify-content: stretch);
     box-shadow: 0px 3px 10px #0000000d;
 
-    // (1.1) Top Bar
+    // (1.1) Top Bar (Logo)
 
     &__top-bar {
         width: 100%;
@@ -122,10 +122,15 @@
     .header {
         height: 80px;
 
+        // (1.1) Top Bar (Logo)
+
         &__top-bar {
             height: 100%;
             padding: 25px 20px;
+            border-bottom: none;
         }
+
+        // (1.2) Search Bar
 
         &__search-bar {
 
@@ -134,11 +139,47 @@
             }
 
             &--tablet--desktop {
+                margin: 0 50px;
                 position: relative;
                 bottom: 42px;
                 height: 50px;
                 display: inline-block;
                 flex-grow: 1;
+            }
+        }
+
+        &__input {
+            height: 40px;
+            border: 1px solid $light-grey;
+            border-radius: 5px;
+            margin-top: 5.5px;
+        }
+
+        // (1.3) Profile
+
+        &__profile {
+            height: 80px;
+            padding-left: 19px;
+            border-left: 1px solid adjust-color($middle-grey, $alpha: -0.5);
+            @include flex;
+
+            &-icon {
+                display: none; // hides profile icon for non-mobile devices
+            }
+
+            &-img {
+                width: 129px;
+                height: 40px;
+                @include flex;
+            }
+
+            &-name {
+                height: 17px;
+                color: $dark-grey;
+                font-size: 0.5rem;
+                font-weight: 400;
+                letter-spacing: 0.01rem;
+                line-height: 120%;
             }
         }
     }
