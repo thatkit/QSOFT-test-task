@@ -302,5 +302,25 @@ body::-webkit-scrollbar {
     height: 120px;
     margin: 0 10px 20px;
   }
+  .main__item:first-child img {
+    width: 117px;
+    height: 64px;
+  }
+  .main__item:nth-child(2) img {
+    width: 183px;
+    height: 34px;
+  }
+  .main__item:nth-child(4) img {
+    width: 175px;
+    height: 70px;
+  }
+  .main__item:nth-child(5) img {
+    width: 187px;
+    height: 38px;
+  }
+  .main__item:nth-child(7) img {
+    width: 196px;
+    height: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
